@@ -22,6 +22,10 @@ Welcome to **PYT-Core**, the next generation of coding. Created to support all P
 - **Event Handling:** Centralized event management to promote clean and efficient event usage.
 - **Update Management:** Ease up the updating of supported scripts.
 
+## Dependencies
+
+1. `ox_lib`
+
 ## Installation
 
 1. Download the latest release from the GitHub repository.

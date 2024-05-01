@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 games { 'gta5' }
+lua54 'yes'
 
 author 'Pyth3rEx'
 description 'PYT-Core resource'
@@ -8,6 +9,7 @@ version '0.0.0'
 shared_scripts {
     'shared/config.lua',
     'shared/shared.lua',
+    '@ox_lib/init.lua',
 }
 
 client_scripts {
@@ -16,4 +18,8 @@ client_scripts {
 
 server_scripts {
     'server/mainServer.lua'
+}
+
+dependencies {
+    'ox_lib',
 }

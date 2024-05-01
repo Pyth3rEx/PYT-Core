@@ -17,3 +17,32 @@ AddEventHandler('PYT-Core:Server:DebugPrinter', function (message, isForServer, 
         print(tostring(message))
     end
 end)
+
+--[[ Server Callback: PYT-Core:Client:RessourceChecker
+    Description:
+        Will check an list of ressources to see if they are started
+    Argument:
+        ressources [table] [string]: list of ressources to check (may be a single ressource as a string)
+    Returns:
+        startedRessources [table]: list of started ressource(s)
+        false: none of the given ressource(s) is/are started
+        nil: improper input given
+]]--
+lib.callback.register('PYT-Core:Server:RessourceChecker', function (source, ressources)
+    -- Ensure the input is valid
+    if type(ressources) ~= 'table' and type(ressources) == 'string' then
+        ressources = {ressources}
+    elseif type(ressources) ~= 'table' then
+        error("Invalid resources input. Expected a table.", 0)
+        return nil
+    end
+    local startedRessources = {}
+    for _, ressource in ipairs(ressources) do
+        
+        if 'started' == GetResourceState(ressource) then
+            table.insert(startedRessources, ressource)
+        end
+    end
+    if nil == next(startedRessources) then return false end
+    return startedRessources
+end)
