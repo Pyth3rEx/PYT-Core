@@ -16,11 +16,10 @@ Welcome to **PYT-Core**, the next generation of coding. Created to support all P
 
 ## Features
 
-- **Debugging Tools:** Enhanced logging capabilities for easier troubleshooting.
-- **Configuration Management:** Unified configuration handling for all dependent scripts.
-- **Utility Functions:** Commonly used helper functions and utilities that can streamline development.
-- **Event Handling:** Centralized event management to promote clean and efficient event usage.
-- **Update Management:** Ease up the updating of supported scripts.
+- **Master Debugging:** Master debugging function, allowing you to toggle all debug outputs of supported scripts
+- **Client & Server Ressource Checker:** Check if ressources are started on the client or on the server
+- **Table to string:** A universalised table to string function for these damn debugging nights
+- **Update Management:** TO COME: Ease up the updating of supported scripts.
 
 ## Dependencies
 
@@ -33,6 +32,7 @@ Welcome to **PYT-Core**, the next generation of coding. Created to support all P
 3. If you're using QBCore, ensure that you have the QBCore framework already installed and configured.
 4. Add `ensure PYT_Core` to your server's `server.cfg` file.
 5. Restart your server, or load the resource for the first time via the console.
+6. Check `shared/shared.lua` for all exports and their documentation!
 
 ## Configuration
 

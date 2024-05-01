@@ -18,7 +18,7 @@ AddEventHandler('PYT-Core:Server:DebugPrinter', function (message, isForServer, 
     end
 end)
 
---[[ Server Callback: PYT-Core:Client:RessourceChecker
+--[[ Server Callback: PYT-Core:Server:RessourceChecker
     Description:
         Will check an list of ressources to see if they are started
     Argument:
@@ -45,4 +45,21 @@ lib.callback.register('PYT-Core:Server:RessourceChecker', function (source, ress
     end
     if nil == next(startedRessources) then return false end
     return startedRessources
+end)
+
+--[[ Server Callback: PYT-Core:Server:TableToString
+    Description:
+        Will turn a table into a string (good for error printing lol)
+    Argument:
+        initialTable [table]: table to convert into a string
+        delimiter [string]: delimiter to put between each element (for example a space)
+    Returns:
+        resultingString [string]: resulting string
+]]--
+lib.callback.register('PYT-Core:Server:TableToString', function (source, initialTable, delimiter)
+    local resultingString = ''
+    for element, _ in ipairs(initialTable) do
+        resultingString = resultingString .. tostring(delimiter) .. tostring(initialTable[element])
+    end
+    return resultingString
 end)

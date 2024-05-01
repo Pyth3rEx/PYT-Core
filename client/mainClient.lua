@@ -30,4 +30,3 @@ lib.callback.register('PYT-Core:Client:RessourceChecker', function (ressources)
     if nil == next(startedRessources) then return false end
     return startedRessources
 end)
-

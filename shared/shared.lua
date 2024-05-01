@@ -27,13 +27,25 @@ end)
         false: none of the given ressource(s) is/are started
 ]]--
 exports('ressourceChecker', function (source, ressources, isForServer)
-    if true == Config.Modules.RessourceChecker then
-        local startedRessources
-        if true == isForServer then
-            startedRessources = lib.callback.await('PYT-Core:Server:RessourceChecker', source, ressources)
-        else
-            startedRessources = lib.callback.await('PYT-Core:Client:RessourceChecker', false, source, ressources)
-        end
-        return startedRessources
+    local startedRessources
+    if true == isForServer then
+        startedRessources = lib.callback.await('PYT-Core:Server:RessourceChecker', source, ressources)
+    else
+        startedRessources = lib.callback.await('PYT-Core:Client:RessourceChecker', false, source, ressources)
     end
+    return startedRessources
+end)
+
+--[[ export: tableToString
+    Description:
+        Will turn a table into a string (good for error printing lol)
+    Argument:
+        initialTable [table]: table to convert into a string
+        delimiter [string]: delimiter to put between each element (for example a space)
+    Returns:
+        resultingString [string]: resulting string
+]]--
+exports('tableToString', function (source, table)
+    local resultingString = lib.callback.await('PYT-Core:Server:TableToString', source, table)
+    return resultingString
 end)
