@@ -5,7 +5,7 @@
 </p>
 <p align="center">
 <a href="https://github.com/Pyth3rEx/PYT-Core/releases">
-  <img src="https://img.shields.io/badge/Version-0.0.0-dodgerblue" alt="Version">
+  <img src="https://img.shields.io/badge/Version-0.0.1-dodgerblue" alt="Version">
 </a>
 <a href="https://discord.gg/9yk7mze5n3">
   <img src="https://img.shields.io/badge/Discord-link?logo=https%3A%2F%2Fbanner2.cleanpng.com%2F20180502%2Feve%2Fkisspng-discord-computer-icons-logo-simplify-5aea4b0b9a5315.3824979315253040756321.jpg&color=%237289DA" alt="Discord">
