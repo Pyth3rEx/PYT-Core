@@ -3,7 +3,7 @@ games { 'gta5' }
 lua54 'yes'
 
 author 'Pyth3rEx'
-description 'PYT-Core resource'
+description 'PYT_Core resource'
 version '0.0.0'
 
 shared_scripts {
@@ -22,4 +22,10 @@ server_scripts {
 
 dependencies {
     'ox_lib',
+}
+
+server_export {
+    'debugPrinter',
+    'ressourceChecker',
+    'tableToString',
 }

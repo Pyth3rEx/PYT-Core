@@ -30,7 +30,7 @@ Welcome to **PYT-Core**, the next generation of coding. Created to support all P
 1. Download the latest release from the GitHub repository.
 2. Extract the `PYT_Core` folder into your server's resource directory.
 3. If you're using QBCore, ensure that you have the QBCore framework already installed and configured.
-4. Add `ensure PYT_Core` to your server's `server.cfg` file.
+4. Add `ensure PYT_Core` to the top your server's `server.cfg` file (make sure it's still below it's dependencies).
 5. Restart your server, or load the resource for the first time via the console.
 6. Check `shared/shared.lua` for all exports and their documentation!
 

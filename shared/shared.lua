@@ -12,7 +12,7 @@ exports('debugPrinter', function (message, targetID)
         if nil == targetID then
             isForServer = true
         end
-        TriggerServerEvent('PYT-Core:Server:DebugPrinter', message, isForServer, targetID)
+        TriggerServerEvent('PYT_Core:Server:DebugPrinter', message, isForServer, targetID)
     end
 end)
 
@@ -29,9 +29,9 @@ end)
 exports('ressourceChecker', function (source, ressources, isForServer)
     local startedRessources
     if true == isForServer then
-        startedRessources = lib.callback.await('PYT-Core:Server:RessourceChecker', source, ressources)
+        startedRessources = lib.callback.await('PYT_Core:Server:RessourceChecker', source, ressources)
     else
-        startedRessources = lib.callback.await('PYT-Core:Client:RessourceChecker', false, source, ressources)
+        startedRessources = lib.callback.await('PYT_Core:Client:RessourceChecker', false, source, ressources)
     end
     return startedRessources
 end)
@@ -46,6 +46,6 @@ end)
         resultingString [string]: resulting string
 ]]--
 exports('tableToString', function (source, table)
-    local resultingString = lib.callback.await('PYT-Core:Server:TableToString', source, table)
+    local resultingString = lib.callback.await('PYT_Core:Server:TableToString', source, table)
     return resultingString
 end)

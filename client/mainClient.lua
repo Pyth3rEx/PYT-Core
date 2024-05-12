@@ -1,15 +1,15 @@
---[[ Client Event: PYT-Core:Client:DebugPrinter
+--[[ Client Event: PYT_Core:Client:DebugPrinter
     Description:
         Will print a debug message to the client
     Argument:
         message [string]: message to be printed to the client
 ]]--
-RegisterNetEvent('PYT-Core:Client:DebugPrinter')
-AddEventHandler('PYT-Core:Client:DebugPrinter', function (message)
+RegisterNetEvent('PYT_Core:Client:DebugPrinter')
+AddEventHandler('PYT_Core:Client:DebugPrinter', function (message)
     print(tostring(message))
 end)
 
---[[ Client Callback: PYT-Core:Client:RessourceChecker
+--[[ Client Callback: PYT_Core:Client:RessourceChecker
     Description:
         Will check an list of ressources to see if they are started
     Argument:
@@ -18,7 +18,7 @@ end)
         startedRessources [table]: list of started ressource(s)
         false: none of the given ressource(s) is/are started
 ]]--
-lib.callback.register('PYT-Core:Client:RessourceChecker', function (ressources)
+lib.callback.register('PYT_Core:Client:RessourceChecker', function (ressources)
     print('also...')
     local startedRessources = {}
     for _, ressource in ipairs(ressources) do
